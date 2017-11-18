@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_display_note"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.bignerdranch.android.imenikas.DisplayNote">
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/scrollView1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:context="om.bignerdranch.android.imenikas.DisplayContact" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <EditText
+                android:id="@+id/editTextNameN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="82dp"
+                android:ems="10"
+                android:inputType="text" >
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editTextDatum"
+                android:layout_below="@+id/editTextDatum"
+                android:layout_marginTop="22dp"
+                android:ems="10"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/textViewNameN"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextNameN"
+                android:layout_alignParentLeft="true"
+                android:text="@string/naslov"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/buttonb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editTextCity"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="28dp"
+                android:onClick="runn"
+                android:text="@string/savenote" />
+
+            <TextView
+                android:id="@+id/textViewNote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextNote"
+                android:layout_alignLeft="@+id/textViewNameN"
+                android:text="@string/zabiljeska"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/editTextCity"
+                android:layout_alignLeft="@+id/textViewNameN"
+                android:text="@string/grad"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <TextView
+                android:id="@+id/textViewDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/editTextEmail"
+                android:layout_alignLeft="@+id/textViewCity"
+                android:layout_alignBottom="@+id/editTextDatum"
+                android:text="@string/datum"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+
+            <EditText
+                android:id="@+id/editTextDatum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editTextNameN"
+                android:layout_below="@+id/editTextCity"
+                android:ems="10"
+                android:inputType="date" >
+
+                <requestFocus />
+            </EditText>
+
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/editTextDatum"
+                android:layout_below="@+id/editTextNameN"
+                android:ems="10"
+                android:inputType="text" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
